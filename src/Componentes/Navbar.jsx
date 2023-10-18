@@ -70,9 +70,9 @@ const Navbar = () => {
     }
 
     return (
-        <div className='' >
-            <div className='max-w-[1440px] mx-auto bg-transparent  px-2 md:px-10 py-3 my-2 '>
-                <div className="navbar bg-base-100">
+        <div className=' bg-transparent ' >
+            <div className='max-w-[1440px] mx-auto border  px-2 md:px-10  '>
+                <div className="navbar ">
                     <div className="navbar-start">
                         <div className=" hidden lg:flex">
                             <ul className=" flex gap-10 px-1">

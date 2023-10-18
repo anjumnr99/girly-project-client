@@ -15,8 +15,8 @@ const Login = () => {
             .then(result => {
                 console.log(result);
                 Swal.fire(
-                    'Good job!',
                     'Logged Successfully!',
+                    '',
                     'success'
                   );
                 navigate(location?.state ? location.state : '/')
@@ -44,8 +44,8 @@ const Login = () => {
             .then(result => {
                      
                 Swal.fire(
-                    'Good job!',
                     'Logged Successfully!',
+                    '',
                     'success'
                   )
                 // toast.success('Logged Successfully!')

@@ -33,8 +33,8 @@ const Register = () => {
                },1000);
 
                Swal.fire(
-                'Good job!',
                 'Profile successfully created!',
+                '',
                 'success'
               );
                navigate('/');
