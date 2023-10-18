@@ -1,9 +1,12 @@
 import { createBrowserRouter } from "react-router-dom";
 import MainLayout from "../Layout/MainLayout";
 import Home from "../Pages/Home";
-import AddProducts from "../Pages/AddProducts";
+import AddProducts from "../Pages/AddProduct";
 import MyCart from "../Pages/MyCart";
 import Login from "../Pages/Login";
+import Register from "../Pages/Register";
+import PrivateRoute from "../PrivateRoute/PrivateRoute";
+import AddProduct from "../Pages/AddProduct";
 
 
 const myCreatedRouters = createBrowserRouter([
@@ -16,16 +19,26 @@ const myCreatedRouters = createBrowserRouter([
                 element:<Home></Home>
             },
             {
-                path:'/addProducts',
-                element:<AddProducts></AddProducts>
+                path:'/addProduct',
+                element: <PrivateRoute>
+                    <AddProduct></AddProduct>
+                </PrivateRoute>
+                
             },
             {
                 path:'/myCart',
-                element:<MyCart></MyCart>
+                element: <PrivateRoute>
+                    <MyCart></MyCart>
+                </PrivateRoute>
+                
             },
             {
                 path:'/login',
                 element:<Login></Login>
+            },
+            {
+                path:'/register',
+                element:<Register></Register>
             }
         ]
     }
