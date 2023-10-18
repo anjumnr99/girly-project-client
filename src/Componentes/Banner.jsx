@@ -13,7 +13,7 @@ const Banner = () => {
     return (
         <div className=" max-w-[1440px] mx-auto mb-5 ">
 
-            <div className="hero max-h-[80vh] ">
+            <div className="hero  max-h-[90vh] ">
                 <div className="flex h-full">
                     <img data-aos="fade-up" data-aos-offset="300" data-aos-easing="ease-in-sine" className="h-full w-full md:w-[60%]" src="https://i.ibb.co/ZTSXH76/seductive-colorful-lipstick-colors-lip-care-coloring-lipstick-sexiness-generative-ai-210687-2103.jpg" alt="" />
 
