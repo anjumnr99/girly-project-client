@@ -37,18 +37,9 @@ const Navbar = () => {
 
     </>
     return (
-        <div >
-            <div className='max-w-[1440px] mx-auto px-2 md:px-10 py-5 my-5'>
-                <div className=" hidden  lg:flex justify-center items-center mb-5">
-                    <div>
-                        <img className="  " src="https://see.fontimg.com/api/renderfont4/PK12m/eyJyIjoiZnMiLCJoIjo4MywidyI6MTAwMCwiZnMiOjgzLCJmZ2MiOiIjMDAwMDAwIiwiYmdjIjoiI0ZBRjZGMSIsInQiOjF9/R2lybHk/geraldine-personal-use-italic.png" alt="" />
+        <div className='' >
+            <div className='max-w-[1440px] mx-auto bg-transparent  px-2 md:px-10 py-3 my-2 '>
 
-                        <label className=' label ml-8 -mt-4 '>
-                            <span className="label-text-alt text-gray-400 font-semibold italic ">Pretty does as pretty pleases.</span>
-                        </label>
-                    </div>
-
-                </div>
 
                 <div className="navbar bg-base-100">
                     <div className="navbar-start">
@@ -70,6 +61,19 @@ const Navbar = () => {
 
                         </Link>
 
+                    </div>
+
+                    <div className=' navbar-center '>
+                        <div className=" hidden  lg:flex justify-center items-center ">
+                            <div>
+                                <img  src="https://see.fontimg.com/api/renderfont4/PK12m/eyJyIjoiZnMiLCJoIjo4MywidyI6MTAwMCwiZnMiOjgzLCJmZ2MiOiIjMDAwMDAwIiwiYmdjIjoiI0ZBRjZGMSIsInQiOjF9/R2lybHk/geraldine-personal-use-italic.png" alt="" />
+
+                                <label className=' label ml-8 -mt-4 '>
+                                    <span className="label-text-alt text-gray-400 font-semibold italic ">Pretty does as pretty pleases.</span>
+                                </label>
+                            </div>
+
+                        </div>
                     </div>
 
                     <div className="navbar-end flex justify-end items-center gap-3">
