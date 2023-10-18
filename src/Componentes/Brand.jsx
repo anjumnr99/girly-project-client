@@ -14,7 +14,7 @@ const Brand = ({ brand }) => {
 
 
             <div data-aos="flip-left" data-aos-easing="ease-out-cubic" className=' flex flex-col items-center p-3'>
-                <Link>
+                <Link to={`/brands/${_id}`}>
                     <div className="avatar">
                         <div className=" w-60 rounded-full ring ring-rose-600 ring-offset-rose-300 ring-offset-4">
                             <img src={image} />
