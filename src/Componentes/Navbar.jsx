@@ -71,7 +71,7 @@ const Navbar = () => {
 
     return (
         <div className=' bg-transparent ' >
-            <div className='max-w-[1440px] mx-auto border  px-2 md:px-10  '>
+            <div className='max-w-[1440px] mx-auto   px-2 md:px-10 pb-3 lg:pb-1 '>
                 <div className="navbar ">
                     <div className="navbar-start">
                         <div className=" hidden lg:flex">

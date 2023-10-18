@@ -1,5 +1,4 @@
-import { Link } from "react-router-dom";
-
+import Swal from "sweetalert2";
 
 const AddProduct = () => {
 
@@ -16,10 +15,27 @@ const AddProduct = () => {
         const newProduct = { name, brand, type, image, price, rating, description };
 
         console.log(newProduct);
+
+        fetch('http://localhost:5000/products', {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(newProduct)
+        })
+            .then(res => res.json())
+            .then(data => {
+                Swal.fire(
+                    'The Product added successfully!',
+                    '',
+                    'success'
+                );
+                console.log(data);
+            })
     }
 
     return (
-        <div className="max-w-[1440px]  mx-auto py-10" >
+        <div className="max-w-[1440px] border-t-2 mx-auto py-10" >
 
             <div className=" max-w-4xl  mx-auto min-h-[60vh] px-3 mb-5 flex flex-col  justify-center items-center ">
                 <h1 className=" text-4xl text-gray-500  font-bold mb-4">Add new product</h1>
