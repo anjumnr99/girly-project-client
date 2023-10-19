@@ -2,16 +2,19 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { useEffect } from 'react';
 
-
 const Banner = () => {
+    
 
     useEffect(() => {
         AOS.init({ duration: 1000 });
     }, []);
 
+   
+
 
     return (
         <div className=" max-w-[1440px] mx-auto mb-5 ">
+
 
             <div className="hero  max-h-[90vh] ">
                 <div className="flex h-full">
@@ -24,7 +27,7 @@ const Banner = () => {
 
                 <div className=" max-w-xl text-left my-4">
 
-                    <div data-aos="fade-left" 
+                    <div data-aos="fade-left"
                         data-aos-easing="ease-in-sine" className="  text-right  bg-transparent p-6 ">
 
                         <h1 className="mb-5 text-5xl  lg:text-8xl text-orange-600 font-bold">Look beautiful enchanting</h1>

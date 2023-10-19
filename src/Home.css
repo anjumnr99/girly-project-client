@@ -1,0 +1,14 @@
+
+.light-theme {
+    color: rgb(55, 65, 81);
+}
+
+.dark-theme {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+.rose-theme{
+    background-color: rgb(209, 51, 51);
+    
+}

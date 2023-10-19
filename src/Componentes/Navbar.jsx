@@ -70,8 +70,8 @@ const Navbar = () => {
     }
 
     return (
-        <div className=' bg-transparent ' >
-            <div className='max-w-[1440px] mx-auto   px-2 md:px-10 pb-3 lg:pb-1 '>
+        <div className=' bg-transparent  ' >
+            <div className='max-w-[1440px] mx-auto   px-2 md:px-10'>
                 <div className="navbar ">
                     <div className="navbar-start">
                         <div className=" hidden lg:flex">
@@ -139,7 +139,7 @@ const Navbar = () => {
 
                     </div> */}
 
-                    <div className="navbar-end flex justify-end items-center gap-3">
+                    <div className="navbar-end  flex justify-end items-center gap-3">
 
                         <div className="dropdown dropdown-bottom dropdown-end">
                             <label tabIndex={0} className=" lg:hidden text-2xl h-5 w-5">
@@ -158,7 +158,7 @@ const Navbar = () => {
                                     <div className="hidden lg:block">
                                         <div className="">
                                             <label tabIndex={0} className="avatar">
-                                                <div className=" w-16 rounded-full">
+                                                <div className=" w-12 rounded-full">
                                                     <img src={user.photoURL} />
                                                 </div>
                                             </label>
@@ -168,7 +168,7 @@ const Navbar = () => {
                                         <p className="">{user.email}</p>
 
 
-                                        <button onClick={handleLogOut} className="btn text-lg font-semibold text-slate-600">
+                                        <button onClick={handleLogOut} className=" text-base border bg-orange-400 hover:bg-orange-500 btn font-semibold text-slate-600">
                                             <NavLink
                                                 to="/login"
                                                 className={({ isActive, isPending }) =>
@@ -195,7 +195,7 @@ const Navbar = () => {
                                         <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-fit">
                                             <li> <p className=" text-center">{user.displayName}</p></li>
                                             <li><p className="">{user.email}</p></li>
-                                            <li><button onClick={handleLogOut} className="btn text-lg font-semibold text-slate-600">
+                                            <li><button onClick={handleLogOut} className="btn text-lg font-semibold  text-slate-600">
                                                 <NavLink
                                                     to="/login"
                                                     className={({ isActive, isPending }) =>

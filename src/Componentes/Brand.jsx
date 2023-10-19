@@ -3,7 +3,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { useEffect } from 'react';
 
-const Brand = ({ brand }) => {
+const Brand = ({ brand,mode }) => {
     const { _id, image, name } = brand || {};
     useEffect(()=>{
         AOS.init({duration:2000});
@@ -22,7 +22,7 @@ const Brand = ({ brand }) => {
 
                     </div>
                     <div className='text-center mt-3'>
-                        <p className='text-2xl text-gray-700 font-semibold'>{name}</p>
+                        <p className={`text-2xl ${mode} font-semibold`}>{name}</p>
 
                     </div>
                 </Link>
