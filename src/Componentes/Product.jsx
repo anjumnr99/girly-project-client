@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 
 const Product = ({ product }) => {
-    const {_id, name, brand, image, type, price, rating } = product || {};
+    const { _id, name, brand, image, type, price, rating } = product || {};
     return (
         <div>
             <div className="card glass">
@@ -22,12 +22,14 @@ const Product = ({ product }) => {
                         <img className="absolute block w-full h-full " src={image} alt="" />
 
                         <div className="absolute overlay rounded-b-lg bg-[#0B0B0B80] bottom-0 w-full h-24 "></div>
-                        <div className="absolute block bottom-6 ">
+                        <div className="absolute block bottom-6 left-6 ">
                             <Link to={`/product/details/${_id}`}>
-                                <button  className=" btn border-none mr-3  ">Details</button>
+                                <button className=" btn border-none mr-3 rounded-none bg-rose-500 text-white ">Details</button>
                             </Link>
-                            
-                            <button className=" btn border-none   ">Update</button>
+
+                            <Link to={`/update/${_id}`}>
+                                <button className=" btn border-none rounded-none bg-rose-500 text-white ">Update</button>
+                            </Link>
                         </div>
 
                     </figure>
@@ -45,9 +47,9 @@ const Product = ({ product }) => {
                             <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
                             <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
                         </div>
-                         <p className="text-lg font-bold ml-2">{rating}</p>
+                        <p className="text-lg font-bold ml-2">{rating}</p>
                     </div>
-                   
+
 
 
                 </div>

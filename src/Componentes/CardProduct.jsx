@@ -1,12 +1,50 @@
 import { Link } from "react-router-dom";
+import Swal from "sweetalert2";
 
 
-const CardProduct = ({product}) => {
-    const {_id, name, brand, image, type, price, rating } = product || {};
+const CardProduct = ({ product,cart,setCart }) => {
+    const { _id, name, brand, image, type, price, rating } = product || {};
+
+    const handleRemove = (id) => {
+        console.log('delete the id : ', _id);
+
+        Swal.fire({
+            title: 'Are you sure?',
+            text: "You won't be able to revert this!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Yes, delete it!'
+        }).then((result) => {
+            if (result.isConfirmed) {
+
+                fetch(`http://localhost:5000/cart/${_id}`, {
+                    method: "DELETE"
+                })
+                    .then(res => res.json())
+                    .then(data => {
+                        console.log(data);
+
+                        if (data.deletedCount > 0) {
+                            Swal.fire(
+                                'Deleted!',
+                                'Your file has been deleted.',
+                                'success'
+                            )
+                            const remainingProducts = cart?.filter(product => product?._id !== _id);
+                            setCart(remainingProducts)
+                        }
+
+                    })
+
+            }
+        })
+    }
     return (
         <div>
             <div className="card glass">
-             
+
                 <div className="  ">
                     <figure className="relative  w-full h-96">
                         <img className="absolute block w-full h-full " src={image} alt="" />
@@ -17,7 +55,7 @@ const CardProduct = ({product}) => {
                                 <button className=" btn border-none bg-orange-400  text-white ">Details</button>
                             </Link>
 
-                            
+
                         </div>
 
                     </figure>
@@ -38,10 +76,10 @@ const CardProduct = ({product}) => {
                         <p className="text-lg font-bold ml-2">{rating}</p>
                     </div>
 
-                    <button className=" btn border-none bg-rose-500 text-white w-full mt-2">Remove from the cart</button>
+                    <button onClick={()=>handleRemove(_id)} className=" btn border-none bg-rose-500 text-white w-full mt-2">Remove from the cart</button>
 
                 </div>
-                
+
 
             </div>
         </div>
