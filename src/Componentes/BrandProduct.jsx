@@ -14,7 +14,7 @@ const BrandProduct = () => {
             .then(data => {
                 // console.log(data);
                 if (data) {
-                    const findProducts = data?.filter(item => (item.brand).toUpperCase() === name.toUpperCase());
+                    const findProducts = data?.filter(item => (item.brand)?.toLocaleLowerCase() === name?.toLocaleLowerCase());
                     setProducts(findProducts)
                 }
 

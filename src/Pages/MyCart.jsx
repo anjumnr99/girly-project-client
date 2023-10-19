@@ -1,9 +1,11 @@
+import { useLoaderData } from "react-router-dom";
 
 
 const MyCart = () => {
+    const cartProducts = useLoaderData();
     return (
         <div>
-            MyCart
+            MyCart :{cartProducts.length}
 
         </div>
     );

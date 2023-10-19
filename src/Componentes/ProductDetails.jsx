@@ -1,12 +1,39 @@
 import React from 'react';
+import { useLoaderData, useParams } from 'react-router-dom';
+import Swal from 'sweetalert2';
 
 const ProductDetails = () => {
+    const product = useLoaderData();
+    const { name,image,price,rating,description,type} = product || {};
+
+    const handleAddToCart = () =>{
+
+        const addProduct = {name,image,price,rating,description,type};
+          
+        fetch('http://localhost:5000/cart', {
+            method: "POST",
+            headers: {
+                'Content-Type': "application/json"
+            },
+            body: JSON.stringify(addProduct)
+        })
+            .then(res => res.json())
+            .then(data => {
+                Swal.fire(
+                    'This product added on cart successfully',
+                    '',
+                    'success'
+                );
+                console.log(data);
+            })
+    }
+
     return (
         <div className='max-w-[1440px] mx-auto'>
             <div className="card md:card-side overflow-y-auto py-10 px-5 rounded-none  md:px-2 lg:px-20  md:h-[100vh] ">
-                <figure className='h-[60%] md:h-full w-full md:w-[50%]'><img className='h-full w-full' src="https://i.ibb.co/m6q4hyX/Golden-face-powder-makeup-product-cosmetic-generative-ai.jpg" alt="Album" /></figure>
-                <div className="   md:h-full w-full md:w-[50%] md:ml-10 space-y-2 md:space-y-3 mb-4 ">
-                    <h2 className=" text-2xl lg:text-4xl font-bold ">Rose Massage Oil</h2>
+                <figure className='h-[60%] md:h-full w-full md:w-[50%]'><img className='h-full w-full' src={image} alt="Album" /></figure>
+                <div className="   md:h-full w-full md:w-[50%] md:ml-10 space-y-2 md:space-y-3 lg:space-y-6 mb-4 ">
+                    <h2 className=" text-2xl lg:text-4xl font-bold ">{name}</h2>
                     <div className='flex gap-2'>
                         <div className="rating">
                             <input type="radio" name="rating-2" className="mask mask-star-2 bg-rose-600" />
@@ -16,14 +43,15 @@ const ProductDetails = () => {
                             <input type="radio" name="rating-2" className="mask mask-star-2 bg-rose-600" />
 
                         </div>
-                        <p className='text-lg text-slate-600 font-normal'>4.9</p>
+                        <p className='text-lg text-slate-600 font-normal'>{rating}</p>
                     </div>
 
-                    <p className='text-md  font-light text-gray-500'>Lorem ipsum dolor sit amet, consectetur adipiscing elit vel imperdiet turpis. Orci varius natoque penatibus et magnis dis parturient montes. Pellentesque pretium lacinia orci nec dictumOrci varius natoque penatibus et magnis dis parturient montes. </p>
-    
-                    <p className='text-2xl text-gray-600 '>$ 299</p>
+                    <p className='text-md  font-light text-gray-500'>{description} </p>
+                     
+                     <p className='font-bold'>TYPE: <span className='text-gray-500 font-light'>{type}</span></p>
+                    <p className='text-2xl text-gray-700 '>$ {price}</p>
                         <div className=" mb-4">
-                            <button className=" bg-rose-600 text-base text-white py-3 px-8 font-semibold">ADD TO CART</button>
+                            <button onClick={handleAddToCart} className=" bg-rose-600 text-base text-white py-3 px-8 font-semibold">ADD TO CART</button>
                         </div>
                 </div>
             </div>
