@@ -1,7 +1,8 @@
+import { Link } from "react-router-dom";
 
 
 const Product = ({ product }) => {
-    const { name, brand, image, type, price, rating } = product || {};
+    const {_id, name, brand, image, type, price, rating } = product || {};
     return (
         <div>
             <div className="card glass">
@@ -22,7 +23,10 @@ const Product = ({ product }) => {
 
                         <div className="absolute overlay rounded-b-lg bg-[#0B0B0B80] bottom-0 w-full h-24 "></div>
                         <div className="absolute block bottom-6 ">
-                            <button className=" btn border-none mr-3  ">Details</button>
+                            <Link to={`/product/details/${_id}`}>
+                                <button  className=" btn border-none mr-3  ">Details</button>
+                            </Link>
+                            
                             <button className=" btn border-none   ">Update</button>
                         </div>
 
