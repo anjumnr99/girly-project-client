@@ -20,7 +20,13 @@ const Register = () => {
           console.log(email,password,name);
 
           if(!/^(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*()_+])[a-zA-Z0-9!@#$%^&*()_+]{6,}$/.test(password)){
-           return toast.error('Invalid password. The password must consists with at least one capital letter , one special character and 6 characters ')
+        //    return toast.error('Invalid password. The password must consists with at least one capital letter , one special character and 6 characters ')
+        return ( Swal.fire({
+            icon: 'error',
+            title: 'Invalid password!',
+            text: " The password must be consists with at least one capital letter , one special character and 6 characters",
+            
+          }))
         }
 
 
@@ -38,9 +44,7 @@ const Register = () => {
                 'success'
               );
                navigate('/');
-               
-               
-               
+                
             })
           })
           .catch(err=>{
