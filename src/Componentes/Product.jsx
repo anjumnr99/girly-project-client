@@ -24,11 +24,11 @@ const Product = ({ product }) => {
                         <div className="absolute overlay rounded-b-lg bg-[#0B0B0B80] bottom-0 w-full h-24 "></div>
                         <div className="absolute block bottom-6 left-6 ">
                             <Link to={`/product/details/${_id}`}>
-                                <button className=" btn border-none mr-3 rounded-none bg-rose-500 text-white ">Details</button>
+                                <button className=" btn border-none mr-3 rounded-none hover:bg-rose-700 bg-rose-500 text-white ">Details</button>
                             </Link>
 
                             <Link to={`/update/${_id}`}>
-                                <button className=" btn border-none rounded-none bg-rose-500 text-white ">Update</button>
+                                <button className=" btn border-none rounded-none hover:bg-rose-700 bg-rose-500 text-white ">Update</button>
                             </Link>
                         </div>
 

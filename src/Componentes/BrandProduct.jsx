@@ -12,20 +12,33 @@ const BrandProduct = () => {
         fetch('http://localhost:5000/products')
             .then(res => res.json())
             .then(data => {
-                // console.log(data);
+                console.log(data);
                 if (data) {
+                    
                     const findProducts = data?.filter(item => (item.brand)?.toLocaleLowerCase() === name?.toLocaleLowerCase());
-                    setProducts(findProducts)
+                    setProducts(findProducts);
+                   
                 }
-
+                 
             })
 
     }, [name]);
 
-    console.log(products);
+    
+
+   
+
     return (
         <div>
-            <Products products={products} ></Products>
+            {
+                products?.length === 0 ?
+                    <div className="h-[80vh] max-w-[1440px] mx-auto px-4 flex justify-center items-center">
+                        <h1 className=" text-xl md:text-2xl lg:text-4xl font-semibold text-center">No available data</h1>
+                    </div> : <Products products={products} ></Products>
+
+            }
+
+
         </div>
     );
 };

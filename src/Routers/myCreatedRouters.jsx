@@ -9,12 +9,14 @@ import AddProduct from "../Pages/AddProduct";
 import BrandProduct from "../Componentes/BrandProduct";
 import ProductDetails from "../Componentes/ProductDetails";
 import UpdatedProduct from "../Pages/UpdatedProduct";
+import Error from "../Pages/Error";
 
 
 const myCreatedRouters = createBrowserRouter([
     {
         path:'/',
         element:<MainLayout></MainLayout>,
+        errorElement: <Error></Error>,
         children:[
             {
                 path:'/',
@@ -47,6 +49,7 @@ const myCreatedRouters = createBrowserRouter([
             {
                 path:'/brands/:id',
                 element:<BrandProduct></BrandProduct>,
+                errorElement: <Error></Error>,
                 loader:({params})=>fetch(`http://localhost:5000/brands/${params.id}`)
             },
             {
@@ -54,6 +57,7 @@ const myCreatedRouters = createBrowserRouter([
                 element:<PrivateRoute>
                     <ProductDetails></ProductDetails>
                 </PrivateRoute>,
+                errorElement: <Error></Error>,
                 loader:({params})=>fetch(`http://localhost:5000/products/${params.id}`)
             },
             {
@@ -61,6 +65,7 @@ const myCreatedRouters = createBrowserRouter([
                 element:<PrivateRoute>
                     <UpdatedProduct></UpdatedProduct>
                 </PrivateRoute>,
+                errorElement: <Error></Error>,
                 loader:({params})=>fetch(`http://localhost:5000/products/${params.id}`)
 
             }

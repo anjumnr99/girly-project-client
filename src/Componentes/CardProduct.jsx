@@ -15,7 +15,7 @@ const CardProduct = ({ product,cart,setCart }) => {
             showCancelButton: true,
             confirmButtonColor: '#3085d6',
             cancelButtonColor: '#d33',
-            confirmButtonText: 'Yes, delete it!'
+            confirmButtonText: 'Yes, remove it!'
         }).then((result) => {
             if (result.isConfirmed) {
 
@@ -28,8 +28,8 @@ const CardProduct = ({ product,cart,setCart }) => {
 
                         if (data.deletedCount > 0) {
                             Swal.fire(
-                                'Deleted!',
-                                'Your file has been deleted.',
+                                'Removed!',
+                                'Your Product has been removed.',
                                 'success'
                             )
                             const remainingProducts = cart?.filter(product => product?._id !== _id);
@@ -52,7 +52,7 @@ const CardProduct = ({ product,cart,setCart }) => {
                         <div className="absolute overlay rounded-b-lg bg-[#0B0B0B80] bottom-0 w-full h-24 "></div>
                         <div className="absolute block bottom-6 right-6 ">
                             <Link to={`/product/details/${_id}`}>
-                                <button className=" btn border-none bg-orange-400  text-white ">Details</button>
+                                <button className=" btn border-none hover:bg-orange-500 bg-orange-400  text-white ">Details</button>
                             </Link>
 
 
@@ -76,7 +76,7 @@ const CardProduct = ({ product,cart,setCart }) => {
                         <p className="text-lg font-bold ml-2">{rating}</p>
                     </div>
 
-                    <button onClick={()=>handleRemove(_id)} className=" btn border-none bg-rose-500 text-white w-full mt-2">Remove from the cart</button>
+                    <button onClick={()=>handleRemove(_id)} className=" btn border-none hover:bg-rose-600 bg-rose-500 text-white w-full mt-2">Remove from the cart</button>
 
                 </div>
 
