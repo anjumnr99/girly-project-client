@@ -1,4 +1,4 @@
-import AliceCarousel from "react-alice-carousel";
+
 import Product from "./Product";
 import Slider from "./Slider";
 

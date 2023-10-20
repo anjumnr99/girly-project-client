@@ -1,4 +1,4 @@
-import { Form } from "react-router-dom";
+
 import Swal from "sweetalert2";
 
 const AddProduct = () => {
@@ -17,7 +17,7 @@ const AddProduct = () => {
 
         console.log(newProduct);
 
-        fetch('http://localhost:5000/products', {
+        fetch('https://girly-project-server-dhlr0se60-anjus-projects-6a90d7b7.vercel.app/products', {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"

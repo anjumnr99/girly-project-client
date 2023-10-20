@@ -1,5 +1,4 @@
 import { useContext } from "react";
-import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
 import { AuthContext } from "../AuthProvider/AuthProvider";
 
@@ -24,7 +23,7 @@ const CardProduct = ({ product,cart,setCart }) => {
         }).then((result) => {
             if (result.isConfirmed) {
 
-                fetch(`http://localhost:5000/cart/${_id}`, {
+                fetch(`https://girly-project-server-dhlr0se60-anjus-projects-6a90d7b7.vercel.app/cart/${_id}`, {
                     method: "DELETE"
                 })
                     .then(res => res.json())

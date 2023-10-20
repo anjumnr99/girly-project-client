@@ -17,7 +17,7 @@ const ProductDetails = () => {
         const addProduct = {userEmail,name,image,price,rating,description,type,brand};
         console.log(addProduct);
           
-        fetch('http://localhost:5000/cart', {
+        fetch('https://girly-project-server-dhlr0se60-anjus-projects-6a90d7b7.vercel.app/cart', {
             method: "POST",
             headers: {
                 'Content-Type': "application/json"
