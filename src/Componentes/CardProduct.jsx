@@ -23,7 +23,7 @@ const CardProduct = ({ product,cart,setCart }) => {
         }).then((result) => {
             if (result.isConfirmed) {
 
-                fetch(`https://girly-project-server-lhcn1d40u-anjus-projects-6a90d7b7.vercel.app/cart/${_id}`, {
+                fetch(`https://girly-project-server-d7qyc15ff-anjus-projects-6a90d7b7.vercel.app/cart/${_id}`, {
                     method: "DELETE"
                 })
                     .then(res => res.json())

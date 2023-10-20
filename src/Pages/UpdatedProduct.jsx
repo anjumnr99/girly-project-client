@@ -23,7 +23,7 @@ const UpdatedProduct = () => {
 
         console.log(updatedProduct);
 
-        fetch(`https://girly-project-server-lhcn1d40u-anjus-projects-6a90d7b7.vercel.app/products/${_id}`, {
+        fetch(`https://girly-project-server-d7qyc15ff-anjus-projects-6a90d7b7.vercel.app/products/${_id}`, {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json"
