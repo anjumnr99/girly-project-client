@@ -1,3 +1,4 @@
+import { Form } from "react-router-dom";
 import Swal from "sweetalert2";
 
 const AddProduct = () => {
@@ -32,6 +33,9 @@ const AddProduct = () => {
                 );
                 console.log(data);
             })
+           
+           e.target.reset() ;
+            
     }
 
     return (
@@ -53,7 +57,7 @@ const AddProduct = () => {
                                 <label className="label">
                                     <span className="label-text text-base text-slate-600 font-bold">Brand name</span>
                                 </label>
-                                <input type="text" placeholder="Brand Name" name="brand" className="input input-bordered" />
+                                <input type="text" placeholder="Brand Name" name="brand" required className="input input-bordered" />
                             </div>
                         </div>
                         <div className="md:flex md:gap-3">
@@ -67,7 +71,7 @@ const AddProduct = () => {
                                 <label className="label">
                                     <span className="label-text text-base text-slate-600 font-bold">Img URL</span>
                                 </label>
-                                <input type="text" placeholder="Image URL" name="image" className="input input-bordered" />
+                                <input type="text" required placeholder="Image URL" name="image" className="input input-bordered" />
                             </div>
                         </div>
                         <div className="md:flex md:gap-3">
@@ -81,7 +85,7 @@ const AddProduct = () => {
                                 <label className="label">
                                     <span className="label-text text-base text-slate-600 font-bold">Rating</span>
                                 </label>
-                                <input type="text" placeholder="Rating" name="rating" className="input input-bordered" />
+                                <input type="text" placeholder="Rating" name="rating" required className="input input-bordered" />
                             </div>
                         </div>
 
@@ -89,7 +93,7 @@ const AddProduct = () => {
                             <label className="label">
                                 <span className="label-text text-base text-slate-600 font-bold">Description</span>
                             </label>
-                            <input type="text" placeholder="Give a short description about product" name="description" className="input input-bordered" />
+                            <input type="text" placeholder="Give a short description about product" required name="description" className="input input-bordered" />
                         </div>
 
                         <div className="form-control mt-6">

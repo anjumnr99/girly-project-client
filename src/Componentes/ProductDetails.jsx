@@ -7,14 +7,14 @@ const ProductDetails = () => {
     const product = useLoaderData();
     const {  user } = useContext(AuthContext);
 
-    const { name,image,price,rating,description,type} = product || {};
+    const { name,brand,image,price,rating,description,type} = product || {};
 
     const handleAddToCart = () =>{
 
         const userEmail = user.email;
         console.log(userEmail);
 
-        const addProduct = {userEmail,name,image,price,rating,description,type};
+        const addProduct = {userEmail,name,image,price,rating,description,type,brand};
         console.log(addProduct);
           
         fetch('http://localhost:5000/cart', {
@@ -56,7 +56,7 @@ const ProductDetails = () => {
                     <p className='text-md  font-light text-gray-500'>{description} </p>
                      
                      <p className='font-bold'>TYPE: <span className='text-gray-500 font-light'>{type}</span></p>
-                    <p className='text-2xl text-gray-700 '>$ {price}</p>
+                    <p className='text-2xl text-gray-700 '> <span className='text-black'>Price :</span> $ {price}</p>
                         <div className=" mb-4">
                             <button onClick={handleAddToCart} className=" bg-rose-600 text-base text-white py-3 px-8 font-semibold">ADD TO CART</button>
                         </div>
