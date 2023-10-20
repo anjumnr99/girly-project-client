@@ -22,7 +22,7 @@ const myCreatedRouters = createBrowserRouter([
             {
                 path:'/',
                 element:<Home></Home>,
-                loader:()=>fetch('https://girly-project-server-dhlr0se60-anjus-projects-6a90d7b7.vercel.app/brands')
+                loader:()=>fetch('https://girly-project-server-lhcn1d40u-anjus-projects-6a90d7b7.vercel.app/brands')
             },
             {
                 path:'/addProduct',
@@ -36,7 +36,7 @@ const myCreatedRouters = createBrowserRouter([
                 element: <PrivateRoute>
                     <MyCart></MyCart>
                 </PrivateRoute>,
-                loader:()=>fetch('https://girly-project-server-dhlr0se60-anjus-projects-6a90d7b7.vercel.app/cart')
+                loader:()=>fetch('https://girly-project-server-lhcn1d40u-anjus-projects-6a90d7b7.vercel.app/cart')
                 
             },
             {
@@ -51,7 +51,7 @@ const myCreatedRouters = createBrowserRouter([
                 path:'/brands/:id',
                 element:<BrandProduct></BrandProduct>,
                 errorElement: <Error></Error>,
-                loader:({params})=>fetch(`https://girly-project-server-dhlr0se60-anjus-projects-6a90d7b7.vercel.app/brands/${params.id}`)
+                loader:({params})=>fetch(`https://girly-project-server-lhcn1d40u-anjus-projects-6a90d7b7.vercel.app/brands/${params.id}`)
             },
             {
                 path:'/product/details/:id',
@@ -59,7 +59,7 @@ const myCreatedRouters = createBrowserRouter([
                     <ProductDetails></ProductDetails>
                 </PrivateRoute>,
                 errorElement: <Error></Error>,
-                loader:({params})=>fetch(`https://girly-project-server-dhlr0se60-anjus-projects-6a90d7b7.vercel.app/products/${params.id}`)
+                loader:({params})=>fetch(`https://girly-project-server-lhcn1d40u-anjus-projects-6a90d7b7.vercel.app/products/${params.id}`)
             },
             {
                 path:'/update/:id',
@@ -67,7 +67,7 @@ const myCreatedRouters = createBrowserRouter([
                     <UpdatedProduct></UpdatedProduct>
                 </PrivateRoute>,
                 errorElement: <Error></Error>,
-                loader:({params})=>fetch(`https://girly-project-server-dhlr0se60-anjus-projects-6a90d7b7.vercel.app/products/${params.id}`)
+                loader:({params})=>fetch(`https://girly-project-server-lhcn1d40u-anjus-projects-6a90d7b7.vercel.app/products/${params.id}`)
 
             }
         ]

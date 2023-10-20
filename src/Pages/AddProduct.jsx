@@ -17,7 +17,7 @@ const AddProduct = () => {
 
         console.log(newProduct);
 
-        fetch('https://girly-project-server-dhlr0se60-anjus-projects-6a90d7b7.vercel.app/products', {
+        fetch('https://girly-project-server-lhcn1d40u-anjus-projects-6a90d7b7.vercel.app/products', {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
