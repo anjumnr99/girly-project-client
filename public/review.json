@@ -1,0 +1,63 @@
+[
+    {
+      "id": 1,
+      "client_pic": "https://i.ibb.co/b3PFkRZ/client1.jpg",
+      "client_name": "Emily Smith",
+      "client_review": "I can't believe the results! This cosmetic line is a game-changer. My skin looks flawless, and I get compliments every day."
+    },
+    {
+      "id": 2,
+      "client_pic": "https://i.ibb.co/K96WxwV/client2.jpg",
+      "client_name": "David Johnson",
+      "client_review": "The lip gloss is incredible. It stays on all day without smudging, and the colors are so vibrant!"
+    },
+    {
+      "id": 3,
+      "client_pic": "https://i.ibb.co/ZSRLtPq/client3.jpg",
+      "client_name": "Olivia Taylor",
+      "client_review": "I've tried many skincare products, but this one takes the cake. My wrinkles have noticeably diminished. I'm so happy!"
+    },
+    {
+      "id": 4,
+      "client_pic": "https://i.ibb.co/m0KLmMY/client4.jpg",
+      "client_name": "James Wilson",
+      "client_review": "The mascara is fantastic. It adds volume and length to my lashes, and it's smudge-proof. I love it!"
+    },
+    {
+      "id": 5,
+      "client_pic": "https://i.ibb.co/K96WxwV/client2.jpg",
+      "client_name": "Sophia Davis",
+      "client_review":  "I purchased the eyeshadow palette, and I'm in love with the pigmentation. The colors blend like a dream."
+    },
+    {
+      "id": 6,
+      "client_pic": "https://i.ibb.co/b3PFkRZ/client1.jpg",
+      "client_name": "Ethan Brown",
+      "client_review": "I'm a makeup artist, and I swear by these cosmetics. They're perfect for my clients and provide a professional finish."
+    },
+    {
+      "id": 7,
+      "client_pic": "https://i.ibb.co/K96WxwV/client2.jpg",
+      "client_name": "Ava Martinez",
+      "client_review": "This foundation is my holy grail. It feels lightweight, covers imperfections, and lasts all day. Highly recommended!"
+    },
+    {
+      "id": 8,
+      "client_pic": "https://i.ibb.co/b3PFkRZ/client1.jpg",
+      "client_name": "Noah Anderson",
+      "client_review": "The skincare routine has transformed my skin. It's smoother, brighter, and has reduced my acne breakouts. I'm thrilled!"
+    },
+    {
+      "id": 9,
+      "client_pic": "https://i.ibb.co/ZSRLtPq/client3.jpg",
+      "client_name": "Mia Rodriguez",
+      "client_review":  "I'm a guy who loves grooming products, and these cosmetics are gender-neutral. The beard oil is a favorite for me!"
+    },
+    {
+      "id": 10,
+      "client_pic": "https://i.ibb.co/m0KLmMY/client4.jpg",
+      "client_name": "Liam Garcia",
+      "client_review": "The setting spray is a must-have. It keeps my makeup intact even on hot summer days. I'm beyond impressed!"
+    }
+  ]
+  

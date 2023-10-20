@@ -5,6 +5,8 @@ import { FiSun } from 'react-icons/fi';
 import { BsMoonFill } from 'react-icons/bs';
 import { useState } from "react";
 import "../Home.css"
+import Review from "../Componentes/Review";
+import Subscription from "../Componentes/Subscription";
 
 
 
@@ -39,6 +41,8 @@ const Home = () => {
 
             <Banner ></Banner>
             <Brands brands={brands} mode={mode} ></Brands>
+            <Review  mode={mode} ></Review>
+            <Subscription  mode={mode} ></Subscription>
 
         </div>
     );

@@ -6,7 +6,10 @@
 .dark-theme {
     background-color: #000000;
     color: #ffffff;
+    border-color: #ffffff;
+    
 }
+
 
 .rose-theme{
     background-color: rgb(209, 51, 51);
