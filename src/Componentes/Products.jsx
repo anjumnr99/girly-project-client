@@ -9,9 +9,6 @@ const Products = ({ products }) => {
 
     console.log(products);
 
-   
-
-
     return (
         <div className=" max-w-[1440px] mx-auto p-10 mt-6">
               

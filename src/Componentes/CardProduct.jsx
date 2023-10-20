@@ -1,13 +1,18 @@
+import { useContext } from "react";
 import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
+import { AuthContext } from "../AuthProvider/AuthProvider";
 
 
 const CardProduct = ({ product,cart,setCart }) => {
     const { _id, name, brand, image, type, price, rating } = product || {};
 
+    const {  user } = useContext(AuthContext);
+
+
     const handleRemove = (id) => {
         console.log('delete the id : ', _id);
-
+         
         Swal.fire({
             title: 'Are you sure?',
             text: "You won't be able to revert this!",
@@ -46,18 +51,8 @@ const CardProduct = ({ product,cart,setCart }) => {
             <div className="card glass">
 
                 <div className="  ">
-                    <figure className="relative  w-full h-96">
-                        <img className="absolute block w-full h-full " src={image} alt="" />
-
-                        <div className="absolute overlay rounded-b-lg bg-[#0B0B0B80] bottom-0 w-full h-24 "></div>
-                        <div className="absolute block bottom-6 right-6 ">
-                            <Link to={`/product/details/${_id}`}>
-                                <button className=" btn border-none hover:bg-orange-500 bg-orange-400  text-white ">Details</button>
-                            </Link>
-
-
-                        </div>
-
+                    <figure className="  w-full h-96">
+                        <img className=" w-full h-full " src={image} alt="" />
                     </figure>
                 </div>
                 <div className=" text-start w-full px-6 py-4 ">
