@@ -18,7 +18,7 @@ const Contact = ({ mode }) => {
 
                 <div className='grid grid-cols-1 lg:grid-cols-2 gap-4'>
                     <div data-aos="zoom-in" className="card shadow-xl  ">
-                        <div className="card-body text-start  lg:space-y-2 justify-start ">
+                        <div className={`card-body text-start ${mode} lg:space-y-2 justify-start `}>
                             <h1 className="text-2xl font-semibold lg:mb-3 ">Contact Us</h1>
                             <div className="flex gap-2">
                                 <MdLocationPin className='text-5xl lg:text-4xl text-rose-500'></MdLocationPin>
@@ -38,7 +38,7 @@ const Contact = ({ mode }) => {
                     </div>
 
                     <div data-aos="zoom-in" className="card shadow-xl  ">
-                        <div className="card-body text-start  space-y-2 justify-start ">
+                        <div className={`card-body text-start ${mode}  space-y-2 justify-start `}>
                             <h1 className="text-2xl font-semibold mb-3 ">Social Media</h1>
                             <p className="  text-gray-600 text-xl font-semibold">You can also contact with us on our <br /> social media platform </p>
                             

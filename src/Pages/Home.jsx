@@ -8,6 +8,7 @@ import "../Home.css"
 import Review from "../Componentes/Review";
 import Subscription from "../Componentes/Subscription";
 import Contact from "../Componentes/Contact";
+import Footer from "../Componentes/Footer";
 
 
 
@@ -45,6 +46,7 @@ const Home = () => {
             <Review  mode={mode} ></Review>
             <Subscription  mode={mode} ></Subscription>
              <Contact mode={mode} ></Contact>
+             <Footer mode={mode} ></Footer>
         </div>
     );
 };
