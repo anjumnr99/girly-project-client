@@ -7,6 +7,7 @@ import { useState } from "react";
 import "../Home.css"
 import Review from "../Componentes/Review";
 import Subscription from "../Componentes/Subscription";
+import Contact from "../Componentes/Contact";
 
 
 
@@ -25,17 +26,17 @@ const Home = () => {
     return (
         <div className={`${mode} `}>
 
-            <div className="flex items-center justify-start max-w-[1440px] mx-auto pl-10 py-2">
+            <div className="flex items-center justify-start max-w-[1440px] mx-auto pl-6 lg:pl-10 mt-4 lg:py-2">
                 <label className="swap swap-rotate ">
 
                     {/* this hidden checkbox controls the state */}
                     <input type="checkbox" />
 
                     {/* sun icon */}
-                    <FiSun onClick={() => handleMode('dark-theme')} className="swap-on fill-current  w-10 h-10"></FiSun>
+                    <FiSun onClick={() => handleMode('dark-theme')} className="swap-on fill-current w-6 lg:w-10 h-10"></FiSun>
 
                     {/* moon icon */}
-                    <BsMoonFill onClick={() => handleMode('light-theme')} className="swap-off  w-10 h-10"></BsMoonFill>
+                    <BsMoonFill onClick={() => handleMode('light-theme')} className="swap-off  w-6 lg:w-10 h-10"></BsMoonFill>
                 </label>
             </div>
 
@@ -43,7 +44,7 @@ const Home = () => {
             <Brands brands={brands} mode={mode} ></Brands>
             <Review  mode={mode} ></Review>
             <Subscription  mode={mode} ></Subscription>
-
+             <Contact mode={mode} ></Contact>
         </div>
     );
 };
