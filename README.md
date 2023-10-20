@@ -1,4 +1,4 @@
-# Girly : https://girly-project-client-auth.web.app/brands/653019c1814074be525317ab
+# Girly : https://girly-project-client-auth.web.app/
 
 
 My project category is cosmetic and beauty. So, my website name is Girly. Here are some project features :
